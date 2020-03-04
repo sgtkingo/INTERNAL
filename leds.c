@@ -12,6 +12,10 @@
 //declared init fce
 void InitDevice(){
     OSCCON=0b01111100; //osc setting, 16 MHz, internal by FOSCH
+<<<<<<< HEAD
+=======
+    OSCTUNE=0x00; //PLLx4 OFF
+>>>>>>> c1189114aa668f4a18ed4c8277571b5af4be3043
     ANSELD=0x00;
     TRISD=0x00;
 }
@@ -32,7 +36,11 @@ void main(void) {
     InitDevice();
     ClearDevice();
     TestDevice();
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> c1189114aa668f4a18ed4c8277571b5af4be3043
     while(1){
         LED=!LED;
         delay_ms(1000);
@@ -43,4 +51,8 @@ void main(void) {
         if(PORTD == 0xFF)LATD=0;
     }
     return;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c1189114aa668f4a18ed4c8277571b5af4be3043
